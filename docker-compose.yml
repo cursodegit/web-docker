@@ -26,7 +26,7 @@ services:
     deploy:
       labels:
         - traefik.discoverable=yes
-        - traefik.http.routers.cursodegit.entryPoints=web-secure
+        - traefik.http.routers.cursodegit.entryPoints=web
         - traefik.http.routers.cursodegit.rule=Host(`www.cursodegit.com`)
         - traefik.http.routers.cursodegit.priority=50
         #- traefik.http.routers.cursodegit.tls.certResolver=letsencrypt
