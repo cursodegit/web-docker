@@ -20,7 +20,7 @@ certificatesResolvers:
   letsencrypt:
     acme:
 #      caServer: https://acme-staging-v02.api.letsencrypt.org/directory
-      email: io@ceronet.com
+      email: cursos@cursodegit.com
       storage: acme.json
       httpChallenge:
         # used during the challenge
