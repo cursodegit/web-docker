@@ -1,0 +1,27 @@
+entryPoints:
+  web:
+    address: ":80"
+
+  web-secure:
+    address: ":443"
+providers:
+  docker:
+    swarmMode: true
+    constraints: "Label(`traefik.discoverable`,`yes`)"
+
+# PAra acceder al dashboard, descomentar estas dos líneas y acceder a la URL: http//da40e5f.online-server.cloud:60666/dashboard/#/
+#api:
+#  dashboard: true
+#  insecure: true
+
+log:
+  level: debug
+certificatesResolvers:
+  letsencrypt:
+    acme:
+#      caServer: https://acme-staging-v02.api.letsencrypt.org/directory
+      email: io@ceronet.com
+      storage: acme.json
+      httpChallenge:
+        # used during the challenge
+        entryPoint: web
